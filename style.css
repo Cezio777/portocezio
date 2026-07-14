@@ -1,0 +1,156 @@
+/* =========================================
+   WARNA CUSTOM & BACKGROUND GRID
+========================================= */
+body {
+    background-color: #080c15;
+    background-image: 
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: #a9b2c3;
+    font-family: 'Chakra Petch', sans-serif;
+    min-height: 100vh;
+}
+
+/* =========================================
+   FONT STYLE & WARNA TEKS
+========================================= */
+.font-mono {
+    font-family: 'Fira Code', monospace;
+}
+
+.text-cyan {
+    color: #00E5FF !important;
+}
+
+.text-white-custom {
+    color: #f0f6fc !important;
+}
+
+/* =========================================
+   TIPOGRAFI HERO SECTION
+========================================= */
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.desc-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================================
+   STYLE TOMBOL
+========================================= */
+.btn-cyan {
+    background-color: #00E5FF;
+    color: #000;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 10px 24px;
+    border: 2px solid #00E5FF;
+    transition: all 0.3s ease;
+}
+
+.btn-cyan:hover {
+    background-color: transparent;
+    color: #00E5FF;
+}
+
+.btn-outline-cyan {
+    background-color: transparent;
+    color: #00E5FF;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 10px 24px;
+    border: 2px solid #00E5FF;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-cyan:hover {
+    background-color: #00E5FF;
+    color: #000;
+}
+
+/* =========================================
+   ANIMASI KURSOR KELAP KELIP
+========================================= */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 20px;
+    background-color: #00E5FF;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 
+    50% { opacity: 0; } 
+}
+
+/* =========================================
+   EFEK DROPDOWN OVERLAY & BLUR (MOBILE)
+========================================= */
+@media (max-width: 991.98px) {
+    .navbar {
+        position: relative;
+    }
+    
+    #navbarNav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(8, 12, 21, 0.85);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        z-index: 9999;
+        padding: 1rem 1rem 2rem 1.5rem;
+        border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+}
+
+/* =========================================
+   EFEK HOVER PADA CARD PROYEK
+========================================= */
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 229, 255, 0.15) !important;
+    border-color: #00E5FF !important;
+}
+
+.border-cyan {
+    border-color: #00E5FF !important;
+}
+
+/* =========================================
+   EFEK GAMBAR CYBERPUNK (CROP & FILTER)
+========================================= */
+.img-cyber {
+    height: 220px; /* Memaksa tinggi gambar seragam */
+    object-fit: cover; /* Memotong gambar secara proporsional tanpa membuatnya gepeng */
+    filter: grayscale(100%) brightness(70%); /* Mengubah jadi hitam putih dan sedikit redup */
+    transition: filter 0.4s ease; /* Transisi halus */
+}
+
+/* Mengembalikan warna asli saat kartu disentuh kursor */
+.custom-card:hover .img-cyber {
+    filter: grayscale(0%) brightness(100%);
+}
